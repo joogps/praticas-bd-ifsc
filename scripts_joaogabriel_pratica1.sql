@@ -111,3 +111,72 @@ SELECT first_name, last_name, employee_id FROM Employees WHERE last_name = "McEw
 
 -- Questão 23
 SELECT first_name, last_name, department_id, salary FROM Employees WHERE salary > 8000;
+
+-- Questão 24
+SELECT * FROM Employees LIMIT 10;
+
+-- Questão 25
+SELECT * FROM Countries WHERE region_id = 4;
+
+-- Questão 26
+SELECT Count(*) from Departments;
+
+-- Questão 27
+SELECT department_name FROM Departments ORDER BY department_name;
+
+-- Questão 28
+SELECT * FROM Departments WHERE manager_id IS NULL;
+
+-- Questão 29
+SELECT department_name FROM Departments WHERE RIGHT(department_name, 1) = "n";
+
+-- Questão 30
+SELECT department_name FROM Departments WHERE LEFT(department_name, 1) = "a";
+
+-- Questão 31
+SELECT MIN(min_salary), MAX(min_salary) FROM Jobs;
+
+-- Questão 32
+SELECT MIN(max_salary), MAX(max_salary) FROM Jobs;
+
+-- Questão 33
+SELECT (min_salary+max_salary) AS sum_salary FROM Jobs;
+
+-- Questão 34
+SELECT AVG(salary) FROM Employees;
+
+-- Questão 35
+SELECT * FROM Locations WHERE country_id = "BR";
+
+-- Questão 36
+SELECT * FROM Countries ORDER BY country_name;
+
+-- Questão 37
+SELECT region_id FROM Regions ORDER BY region_id;
+
+-- Questão 38
+SELECT region_id FROM Regions ORDER BY region_id;
+
+-- Questão 39
+SELECT DISTINCT manager_id FROM Employees;
+
+-- Questão 40
+SELECT * FROM Countries WHERE country_name = "Israel" OR country_name = "Denmark";
+
+-- Questão 41
+SELECT * FROM Job_History ORDER BY start_date;
+
+-- Questão 42
+SELECT start_date, end_date FROM Job_History WHERE start_date BETWEEN "1993-01-01" AND "1998-01-01";
+
+-- Questão 43
+SELECT * FROM Countries WHERE region_id != 1;
+
+-- Questão 44
+SELECT * FROM Countries ORDER BY country_name ASC, country_id DESC;
+
+-- Questão 45
+SELECT * FROM Countries WHERE NOT (country_id = "BR" OR country_id = "FR" OR country_id = "US");
+
+-- Questão 46
+SELECT * FROM Employees WHERE department_id IS NULL;
